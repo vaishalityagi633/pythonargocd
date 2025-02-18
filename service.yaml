@@ -9,4 +9,5 @@ spec:
     - protocol: TCP
       port: 80        # The port exposed by the service (external port)
       targetPort: 5000 # The port on which the Flask application listens in the container
-  type: LoadBalancer  # You can use NodePort or ClusterIP depending on your setup
+      nodePort: 30007 
+  type: NodePort  # You can use NodePort or ClusterIP depending on your setup
