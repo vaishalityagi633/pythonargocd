@@ -4,6 +4,9 @@ metadata:
   name: python-flask-deployment
   labels:
     app: python-flask
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: python-flask=vaishali293/flask-app
+    argocd-image-updater.argoproj.io/python-flask.update-strategy: latest
 spec:
   replicas: 3  # Number of pods to run (adjust as needed)
   selector:
@@ -19,3 +22,4 @@ spec:
           image: vaishali293/flask-app:latest  # Replace with your image name
           ports:
             - containerPort: 5000  # Port exposed by the Flask app in the container
+
