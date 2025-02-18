@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-image-updater-config
+  namespace: argocd
+data:
+  images: |
+    registries:
+      - name: Docker Hub
+        api_url: https://registry.hub.docker.com
+        prefix: docker.io
+        credentials:
+          username: vaishali293
+          password: dckr_pat_iKtjMr7B8mFewApoWXrO1OpDMmc
